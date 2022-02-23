@@ -1,6 +1,6 @@
 package com.test.countryClient.view;
 
-import com.test.countryClient.api.Country;
+import com.test.countryClient.data.Country;
 import com.test.countryClient.rest.AsyncRestClientService;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;

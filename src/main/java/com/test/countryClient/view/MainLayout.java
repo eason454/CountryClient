@@ -30,8 +30,8 @@ public class MainLayout extends AppLayout implements AfterNavigationObserver {
 	public MainLayout() {
 		// Navigation
 		home = new RouterLink("Home", HomeView.class);
-		singleCountry = new RouterLink("Query single country", InMemoryDTOView.class);
-		allCountries = new RouterLink("QueryCountries", AsyncCountriesView.class);
+		singleCountry = new RouterLink("Query country detail", CountryView.class);
+		allCountries = new RouterLink("Query all countries", CountriesView.class);
 
 		final UnorderedList list = new UnorderedList(new ListItem(home), new ListItem(singleCountry),
 				new ListItem(allCountries));

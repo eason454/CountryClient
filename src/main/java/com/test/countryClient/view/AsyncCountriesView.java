@@ -1,6 +1,6 @@
 package com.test.countryClient.view;
 
-import com.test.countryClient.api.Country;
+import com.test.countryClient.data.Country;
 import com.test.countryClient.rest.AsyncRestClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 

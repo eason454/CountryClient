@@ -3,7 +3,7 @@ package com.test.countryClient.rest;
 import java.io.Serializable;
 import java.util.List;
 
-import com.test.countryClient.api.Country;
+import com.test.countryClient.data.Country;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClient.RequestHeadersSpec;
