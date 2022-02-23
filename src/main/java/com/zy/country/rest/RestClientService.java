@@ -1,7 +1,7 @@
-package com.test.countryClient.rest;
+package com.zy.country.rest;
 
-import com.test.countryClient.data.Country;
-import com.test.countryClient.data.CountryList;
+import com.zy.country.data.Country;
+import com.zy.country.data.CountryList;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;

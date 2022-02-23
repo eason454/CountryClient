@@ -1,4 +1,4 @@
-package com.test.countryClient.view;
+package com.zy.country.view;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Main;
@@ -21,10 +21,12 @@ public class HomeView extends Main {
 
 		add(new Section(new H2(new RouterLink("Query all countries", CountriesView.class)),
 				new Paragraph("Query all countries with standard way of calling REST services")));
-//
-//		add(new Section(
-//				new H2(new RouterLink("Query country information by name asynchronously", AsyncCountryView.class))));
-//
-//		add(new Section(new H2(new RouterLink("Query all countries asynchronously", AsyncCountriesView.class))));
+
+		add(new Section(
+				new H2(new RouterLink("Query country detail asynchronously", AsyncCountryView.class)),
+				new Paragraph("Query country detail with reactive way of calling REST services")));
+
+		add(new Section(new H2(new RouterLink("Query all countries asynchronously", AsyncCountriesView.class)),
+				new Paragraph("Query all countries with reactive way of calling REST services")));
 	}
 }

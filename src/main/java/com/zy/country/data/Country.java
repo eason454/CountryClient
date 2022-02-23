@@ -1,4 +1,4 @@
-package com.test.countryClient.data;
+package com.zy.country.data;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

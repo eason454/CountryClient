@@ -1,7 +1,7 @@
-package com.test.countryClient.view;
+package com.zy.country.view;
 
-import com.test.countryClient.data.Country;
-import com.test.countryClient.rest.RestClientService;
+import com.zy.country.data.Country;
+import com.zy.country.rest.RestClientService;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
@@ -21,7 +21,7 @@ import static java.util.Collections.emptyList;
 @Route(value = "query-country-sync", layout = MainLayout.class)
 public class CountryView extends Main {
 
-    public static final String ERROR_INVALID_COUNTRY_NAME = "Invalid country name";
+    private static final String ERROR_INVALID_COUNTRY_NAME = "Invalid country name";
     private final RestClientService service;
 
     private Binder<Country> binder = new Binder<>();
@@ -33,7 +33,7 @@ public class CountryView extends Main {
         name.setRequired(true);
         name.setRequiredIndicatorVisible(true);
         name.setErrorMessage(ERROR_INVALID_COUNTRY_NAME);
-        binder.forField(name).withValidator(new StringLengthValidator("ERROR_INVALID_COUNTRY_NAME", 1, 100)).bind(Country::getName, Country::setName);
+        binder.forField(name).withValidator(new StringLengthValidator(ERROR_INVALID_COUNTRY_NAME, 1, 100)).bind(Country::getName, Country::setName);
 
         Grid<Country> countryGrid = new Grid<>(Country.class);
         countryGrid.removeAllColumns();
@@ -45,6 +45,9 @@ public class CountryView extends Main {
         final Button fetchCountry = new Button("Fetch country",
                 e -> {
                     binder.validate();
+                    if(!binder.isValid()){
+                        return;
+                    }
                     countryGrid.setItems(emptyList());
                     countryGrid.setItems(service.getCountryByName(name.getValue()));
                 });

@@ -8,9 +8,9 @@
 		<version>2.5.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.test</groupId>
+	<groupId>com.zy</groupId>
 	<artifactId>countryClient</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>countryClient</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -61,6 +61,12 @@
 	<profiles>
 		<profile>
 			<id>production</id>
+			<dependencies>
+				<dependency>
+					<groupId>com.vaadin</groupId>
+					<artifactId>flow-server-production-mode</artifactId>
+				</dependency>
+			</dependencies>
 			<build>
 				<plugins>
 					<plugin>
