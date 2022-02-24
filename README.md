@@ -17,11 +17,13 @@ You have to run backend application first in order to use this web application.
 * JDK 1.8 and Maven 3.x in your environment
 * Build the project by running
 
-  ``` mvn clean package ```
+  ``` mvn clean package -Pproduction ```
 
 * Once build successfully, run the application by:
 ```
-     mvn spring-boot:run -Pproduction
+     java -jar target/countryClient-0.0.1.jar
+or
+     mvn spring-boot:run
 ```
 
 You should see log message below if you run it successfully:
