@@ -33,6 +33,6 @@ build/
 ### VS Code ###
 .vscode/
 /webpack.generated.js
-!/package-lock.json
-!/package.json
-!/webpack.config.js
+/package-lock.json
+/package.json
+/webpack.config.js
